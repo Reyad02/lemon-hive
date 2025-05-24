@@ -2,11 +2,14 @@ import Image from "next/image";
 import { FaRegPlayCircle } from "react-icons/fa";
 import { getAllLocations } from "../services/locations";
 import Locations from "@/components/module/location";
+import { getAllEpisodes } from "../services/episodes";
+import Episodes from "@/components/module/episode";
 
 export default async function Home() {
-  const { results } = await getAllLocations();
+  const { results:locations } = await getAllLocations();
+  const { results: episodes } = await getAllEpisodes();
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto pb-20">
       <div className="mt-7">
         <div className="flex mb-4 gap-4 max-w-5xl mx-auto relative items-baseline-last">
           <Image
@@ -63,8 +66,11 @@ export default async function Home() {
         </p>
       </div>
 
-        <p className="text-white text-2xl mb-9">Locations</p>
-      <Locations locations={results} />
+      <p className="text-white text-2xl mt-24 mb-9">Episodes</p>
+      <Episodes episodes={episodes} />
+
+      <p className="text-white text-2xl mt-24 mb-9">Locations</p>
+      <Locations locations={locations} />
     </div>
   );
 }
