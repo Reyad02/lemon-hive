@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { FaRegPlayCircle } from "react-icons/fa";
+import { getAllLocations } from "../services/locations";
+import Locations from "@/components/module/location";
 
-export default function Home() {
+export default async function Home() {
+  const { results } = await getAllLocations();
   return (
-    <>
+    <div className="max-w-7xl mx-auto">
       <div className="mt-7">
-        <div  className="flex mb-4 gap-4 max-w-5xl mx-auto relative items-baseline-last">
+        <div className="flex mb-4 gap-4 max-w-5xl mx-auto relative items-baseline-last">
           <Image
             src={"/Image resource/bubble.png"}
             alt="portal"
@@ -59,6 +62,9 @@ export default function Home() {
           dimensions.
         </p>
       </div>
-    </>
+
+        <p className="text-white text-2xl mb-9">Locations</p>
+      <Locations locations={results} />
+    </div>
   );
 }
