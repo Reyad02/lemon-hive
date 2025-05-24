@@ -1,0 +1,11 @@
+"use server";
+
+export const getAllCharacter = async () => {
+  try {
+    const res = await fetch(`https://rickandmortyapi.com/api/character`);
+    const data = await res.json();
+    return data;
+  } catch (error: any) {
+    return Error(error);
+  }
+};

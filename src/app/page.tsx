@@ -4,10 +4,13 @@ import { getAllLocations } from "../services/locations";
 import Locations from "@/components/module/location";
 import { getAllEpisodes } from "../services/episodes";
 import Episodes from "@/components/module/episode";
+import { getAllCharacter } from "../services/characters";
+import Characters from "@/components/module/character";
 
 export default async function Home() {
   const { results:locations } = await getAllLocations();
   const { results: episodes } = await getAllEpisodes();
+  const { results: characters } = await getAllCharacter();
   return (
     <div className="max-w-7xl mx-auto pb-20">
       <div className="mt-7">
@@ -55,10 +58,10 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center gap-16">
-        <button className="text-[#FBF8F3] outline-none border-none shadow-none px-6 py-5 btn text-xl font-medium rounded-3xl bg-[linear-gradient(to_right,_#9DFE00_20%,_#14D9E6_100%)] flex items-center">
+      <div className="flex justify-center items-center gap-16 mt-6">
+        <a target="_blank" href={"https://www.youtube.com/watch?v=KQ9Cgdsa9tc"}  className="text-[#FBF8F3] outline-none border-none shadow-none px-6 py-5 btn text-xl font-medium rounded-3xl bg-[linear-gradient(to_right,_#9DFE00_20%,_#14D9E6_100%)] flex items-center">
           <FaRegPlayCircle /> Watch Now
-        </button>
+        </a>
         <p className="text-sm max-w-xs text-[#14D9E6]">
           Brilliant but boozy scientist Rick hijacks his fretful teenage
           grandson, Morty, for wild escapades in other worlds and alternate
@@ -66,10 +69,13 @@ export default async function Home() {
         </p>
       </div>
 
-      <p className="text-white text-2xl mt-24 mb-9">Episodes</p>
+      <p className="text-white text-2xl mt-24 mb-8">Meet the cast</p>
+      <Characters characters={characters} />
+
+      <p className="text-white text-2xl mt-24 mb-8">Episodes</p>
       <Episodes episodes={episodes} />
 
-      <p className="text-white text-2xl mt-24 mb-9">Locations</p>
+      <p className="text-white text-2xl mt-24 mb-8">Locations</p>
       <Locations locations={locations} />
     </div>
   );
