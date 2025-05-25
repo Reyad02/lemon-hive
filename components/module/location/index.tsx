@@ -2,13 +2,16 @@
 
 import ShowData from "@/components/shared/ShowData";
 import CustomSlider from "@/components/shared/Slider";
+import { useScreenSize } from "@/src/app/hooks/useScreen";
 import { ILocation } from "@/src/types/location";
 
 const Locations = ({ locations }: { locations: ILocation[] }) => {
+  const width = useScreenSize();
+
   return (
     <CustomSlider
       items={locations}
-      slidesPerView={4}
+      slidesPerView={width < 768 ? 2 : 4}
       useFor="locations"
       renderSlide={(location) => (
         <ShowData uniqueIdentifier={location?.id} value={location?.name} />

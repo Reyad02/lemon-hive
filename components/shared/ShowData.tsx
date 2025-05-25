@@ -14,12 +14,12 @@ const ShowData = ({
       }}
     >
       <div className="p-4 bg-[#191D29]/90 backdrop-blur-md text-white rounded-[12px]">
-        <p className="text-xs">
+        <p className="text-[10px] md:text-xs">
           {typeof uniqueIdentifier === "string"
             ? uniqueIdentifier
             : `#${uniqueIdentifier}`}
         </p>
-        <p className="text-lg">{value}</p>
+        <p className="text-xs md:text-lg">{value}</p>
       </div>
       <div
         className="absolute bottom-0 right-0 w-[80px] h-[80px] bg-gradient-to-r from-[#15BFFDB3] to-[#15BFFDB3] "

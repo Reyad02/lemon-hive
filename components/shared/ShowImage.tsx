@@ -23,7 +23,7 @@ const ShowImage = ({
           width={260}
           height={220}
         />
-        <p className="mt-6">{value}</p>
+        <p className="mt-6 text-[10px] md:text-base">{value}</p>
       </div>
 
       <div
