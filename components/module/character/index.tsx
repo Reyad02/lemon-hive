@@ -10,7 +10,7 @@ const Characters = ({ characters }: { characters: ICharacter[] }) => {
     <CustomSlider
       items={characters}
       slidesPerView={4}
-      position="1/2"
+      useFor="character"
       renderSlide={(character) => (
         <ShowImage imageSrc={character?.image} value={character?.name} />
       )}

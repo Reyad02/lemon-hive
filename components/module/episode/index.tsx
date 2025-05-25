@@ -9,8 +9,12 @@ const Episodes = ({ episodes }: { episodes: IEpisode[] }) => {
     <CustomSlider
       items={episodes}
       slidesPerView={4}
+      useFor="episodes"
       renderSlide={(episode) => (
-        <ShowData uniqueIdentifier={String(episode?.episode)} value={episode?.name} />
+        <ShowData
+          uniqueIdentifier={String(episode?.episode)}
+          value={episode?.name}
+        />
       )}
     />
   );

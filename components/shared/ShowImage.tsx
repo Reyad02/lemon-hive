@@ -8,14 +8,31 @@ const ShowImage = ({
   value: string;
 }) => {
   return (
-    <div className="rounded-xl p-px bg-gradient-to-r from-[#71a546b3] to-[#15BFFDB3]">
-      <div
-        className="p-4 rounded-xl bg-[#191D29] text-white "
-        style={{ clipPath: "polygon(100% 0, 100% 80%, 80% 100%, 0 100%, 0 0)" }}
-      >
-        <Image src={imageSrc} alt="character" width={260} height={220} />
+    <div
+      className="relative p-[2px] bg-gradient-to-r from-[#71a546b3] to-[#15BFFDB3]"
+      style={{
+        clipPath: "polygon(100% 0, 100% 80%, 80% 100%, 0 100%, 0 0)",
+        borderRadius: "14px",
+      }}
+    >
+      <div className="p-4 bg-[#191D29]/90 backdrop-blur-md text-white rounded-[12px]">
+        <Image
+          className="rounded-md"
+          src={imageSrc}
+          alt="character"
+          width={260}
+          height={220}
+        />
         <p className="mt-6">{value}</p>
       </div>
+
+      <div
+        className="absolute bottom-0 right-0 w-[80px] h-[80px] bg-gradient-to-r from-[#15BFFDB3] to-[#15BFFDB3] "
+        style={{
+          clipPath: "polygon(100% 11%, 23% 100%, 100% 100%)",
+          borderRadius: "14px",
+        }}
+      />
     </div>
   );
 };

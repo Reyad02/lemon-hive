@@ -9,11 +9,9 @@ const Locations = ({ locations }: { locations: ILocation[] }) => {
     <CustomSlider
       items={locations}
       slidesPerView={4}
+      useFor="locations"
       renderSlide={(location) => (
-        <ShowData
-          uniqueIdentifier={location?.id}
-          value={location?.name}
-        />
+        <ShowData uniqueIdentifier={location?.id} value={location?.name} />
       )}
     />
   );

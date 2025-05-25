@@ -59,7 +59,7 @@ export default async function Home() {
       </div>
 
       <div className="flex justify-center items-center gap-16 mt-6">
-        <a target="_blank" href={"https://www.youtube.com/watch?v=KQ9Cgdsa9tc"}  className="text-[#FBF8F3] outline-none border-none shadow-none px-6 py-5 btn text-xl font-medium rounded-3xl bg-[linear-gradient(to_right,_#9DFE00_20%,_#14D9E6_100%)] flex items-center">
+        <a target="_blank" href={"https://www.youtube.com/watch?v=KQ9Cgdsa9tc"}  className="text-[#FBF8F3] outline-none border-none shadow-none px-6 py-5 btn text-xl font-medium rounded-3xl bg-[linear-gradient(145.33deg,_rgb(157,_254,_0)_-10.502%,_rgb(20,_217,_230)_95.859%)] flex items-center">
           <FaRegPlayCircle /> Watch Now
         </a>
         <p className="text-sm max-w-xs text-[#14D9E6]">
