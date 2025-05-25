@@ -2,12 +2,12 @@
 
 import ShowData from "@/components/shared/ShowData";
 import CustomSlider from "@/components/shared/Slider";
-import { useScreenSize } from "@/src/app/hooks/useScreen";
+import { useScreenSize } from "@/src/hooks/useScreen";
 import { IEpisode } from "@/src/types/episodes";
 
 const Episodes = ({ episodes }: { episodes: IEpisode[] }) => {
-    const width = useScreenSize();
-  
+  const width = useScreenSize();
+
   return (
     <CustomSlider
       items={episodes}

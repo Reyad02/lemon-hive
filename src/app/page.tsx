@@ -6,14 +6,15 @@ import { getAllEpisodes } from "../services/episodes";
 import Episodes from "@/components/module/episode";
 import { getAllCharacter } from "../services/characters";
 import Characters from "@/components/module/character";
+import Link from "next/link";
 
 export default async function Home() {
-  const { results:locations } = await getAllLocations();
+  const { results: locations } = await getAllLocations();
   const { results: episodes } = await getAllEpisodes();
   const { results: characters } = await getAllCharacter();
   return (
-    <div className="max-w-7xl mx-auto pb-20 px-8 md:px-0 lg:px-0 ">
-      <div className="mt-7">
+    <div className="">
+      <div className="">
         <div className="flex mb-4 gap-4 max-w-5xl mx-auto relative items-baseline-last">
           <Image
             src={"/Image resource/bubble.png"}
@@ -60,7 +61,11 @@ export default async function Home() {
       </div>
 
       <div className="flex flex-col-reverse md:flex-row items-start md:justify-center md:items-center gap-8 md:gap-16 mt-6">
-        <a target="_blank" href={"https://www.youtube.com/watch?v=KQ9Cgdsa9tc"}  className="text-[#FBF8F3] outline-none border-none shadow-none md:px-6 md:py-5 btn text-sm md:text-xl font-medium rounded-3xl bg-[linear-gradient(145.33deg,_rgb(157,_254,_0)_-10.502%,_rgb(20,_217,_230)_95.859%)] flex items-center">
+        <a
+          target="_blank"
+          href={"https://www.youtube.com/watch?v=KQ9Cgdsa9tc"}
+          className="text-[#FBF8F3] outline-none border-none shadow-none md:px-6 md:py-5 btn text-sm md:text-xl font-medium rounded-3xl bg-[linear-gradient(145.33deg,_rgb(157,_254,_0)_-10.502%,_rgb(20,_217,_230)_95.859%)] flex items-center"
+        >
           <FaRegPlayCircle /> Watch Now
         </a>
         <p className="text-[10px] md:text-sm max-w-[200px] md:max-w-xs text-[#14D9E6]">
@@ -70,13 +75,27 @@ export default async function Home() {
         </p>
       </div>
 
-      <p className="text-white  md:text-2xl mt-6 md:mt-24 mb-5 md:mb-8">Meet the cast</p>
+      <div className="flex flex-row items-center justify-between px-4 py-6 md:py-8 text-white  mt-6 md:mt-24 mb-5 md:mb-8">
+        <p className="text-white text-lg md:text-2xl ">
+          Meet the cast
+        </p>
+        <Link
+          href="/cast"
+          className="text-white text-sm md:text-base outline-1 outline-[#9dfe00] rounded-lg py-1.5 px-4 md:px-6 md:py-2.5 transition"
+        >
+          View All
+        </Link>
+      </div>
       <Characters characters={characters} />
 
-      <p className="text-white  md:text-2xl mt-6 md:mt-24 mb-5 md:mb-8">Episodes</p>
+      <p className="text-white md:text-2xl mt-6 md:mt-24 mb-5 md:mb-8">
+        Episodes
+      </p>
       <Episodes episodes={episodes} />
 
-      <p className="text-white md:text-2xl mt-6 md:mt-24 mb-5 md:mb-8">Locations</p>
+      <p className="text-white md:text-2xl mt-6 md:mt-24 mb-5 md:mb-8">
+        Locations
+      </p>
       <Locations locations={locations} />
     </div>
   );

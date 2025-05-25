@@ -26,7 +26,7 @@ const ShowData = ({
             ? uniqueIdentifier
             : `#${uniqueIdentifier}`}
         </p>
-        <p className="text-xs md:text-lg">{value}</p>
+        <p className="text-sm md:text-lg">{value}</p>
       </div>
     </div>
   );

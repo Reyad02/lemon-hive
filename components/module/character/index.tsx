@@ -2,7 +2,7 @@
 
 import ShowImage from "@/components/shared/ShowImage";
 import CustomSlider from "@/components/shared/Slider";
-import { useScreenSize } from "@/src/app/hooks/useScreen";
+import { useScreenSize } from "@/src/hooks/useScreen";
 import { ICharacter } from "@/src/types/characters";
 
 const Characters = ({ characters }: { characters: ICharacter[] }) => {

@@ -2,7 +2,7 @@
 
 import ShowData from "@/components/shared/ShowData";
 import CustomSlider from "@/components/shared/Slider";
-import { useScreenSize } from "@/src/app/hooks/useScreen";
+import { useScreenSize } from "@/src/hooks/useScreen";
 import { ILocation } from "@/src/types/location";
 
 const Locations = ({ locations }: { locations: ILocation[] }) => {

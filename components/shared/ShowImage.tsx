@@ -28,9 +28,9 @@ const ShowImage = ({
           alt="character"
           width={260}
           height={220}
-          className="object-cover rounded-md"
+          className=" rounded-md"
         />
-        <p className="mt-6 text-[10px] md:text-base text-white">{value}</p>
+        <p className="mt-6 text-xs md:text-base text-white">{value}</p>
       </div>
     </div>
   );
