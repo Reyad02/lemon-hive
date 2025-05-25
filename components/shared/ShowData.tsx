@@ -7,13 +7,20 @@ const ShowData = ({
 }) => {
   return (
     <div
-      className="relative p-[2px] bg-gradient-to-r from-[#71a546b3] to-[#15BFFDB3]"
       style={{
-        clipPath: "polygon(100% 0, 100% 60%, 80% 100%, 0 100%, 0 0)",
-        borderRadius: "14px",
+        background: "linear-gradient(to bottom right, #71a546b3, #15BFFDB3)",
+        clipPath: "polygon(0 0, 100% 0, 100% 81%, 80% 100%, 0 100%)",
+        borderRadius: "12px",
       }}
+      className="relative min-w-40 p-[2px]"
     >
-      <div className="p-4 bg-[#191D29]/90 backdrop-blur-md text-white rounded-[12px]">
+      <div
+        style={{
+          clipPath: "polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%)",
+          borderRadius: "10px",
+        }}
+        className="overflow-hidden p-4 bg-[#191D29]/90 backdrop-blur-md text-white "
+      >
         <p className="text-[10px] md:text-xs">
           {typeof uniqueIdentifier === "string"
             ? uniqueIdentifier
@@ -21,13 +28,6 @@ const ShowData = ({
         </p>
         <p className="text-xs md:text-lg">{value}</p>
       </div>
-      <div
-        className="absolute bottom-0 right-0 w-[80px] h-[80px] bg-gradient-to-r from-[#15BFFDB3] to-[#15BFFDB3] "
-        style={{
-          clipPath: "polygon(100% 58%, 22% 100%, 100% 100%)",
-          borderRadius: "14px",
-        }}
-      />
     </div>
   );
 };

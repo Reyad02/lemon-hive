@@ -1,0 +1,5 @@
+.custom-border-gradient {
+    background: linear-gradient(to bottom right, #71a546b3, #15BFFDB3);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+    border-radius: 12px;
+  }
