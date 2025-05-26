@@ -24,7 +24,7 @@ const SingleDataShow = ({
         className="overflow-hidden p-4 bg-[#191D29]/90 backdrop-blur-md text-white flex flex-col gap-1"
       >
         <p className="text-lg md:text-3xl">{item}</p>
-        <p className="text-xs md:text-sm">{name}</p>
+        <p style={{ fontFamily: "TTTravels", fontWeight: 400 }} className="text-xs md:text-sm">{name}</p>
         <p className="text-base md:text-xl">{value}</p>
       </div>
     </div>

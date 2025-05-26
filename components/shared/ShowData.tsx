@@ -11,6 +11,8 @@ const ShowData = ({
         background: "linear-gradient(to bottom right, #71a546b3, #15BFFDB3)",
         clipPath: "polygon(0 0, 100% 0, 100% 81%, 80% 100%, 0 100%)",
         borderRadius: "12px",
+        fontFamily: "TTTravels",
+        fontWeight: 500,
       }}
       className="relative min-w-40 p-[2px]"
     >

@@ -17,13 +17,18 @@ const SingleCast = async ({ params }: { params: Promise<{ id: number }> }) => {
         style={{
           WebkitTextStrokeWidth: "2px",
           WebkitTextStrokeColor: "#1F2D2E",
+          fontFamily: "TTTravels",
+          fontWeight: 800,
         }}
-        className="absolute hidden md:block  -left-1/5 w-fit ml-0 pl-0 rotate-270  text-transparent text-8xl text-nowrap "
+        className="absolute hidden md:block -left-1/4 w-fit ml-0 pl-0 rotate-270  text-transparent text-8xl text-nowrap "
       >
         {results?.name}
       </span>
       <div className="text-center ">
-        <p className="text-[#14D9E6] text-2xl md:text-4xl mb-6 text-nowrap">
+        <p
+          style={{ fontFamily: "TTTravels", fontWeight: 600 }}
+          className="text-[#14D9E6] text-2xl md:text-4xl mb-6 text-nowrap"
+        >
           {results?.name}
         </p>
         <div
@@ -55,7 +60,10 @@ const SingleCast = async ({ params }: { params: Promise<{ id: number }> }) => {
         <hr className="rotate-90 bg-gradient-to-b from-[#9DFE00] to-[#14D9E6] h-[1px] w-[200px] border-0" />
       </div>
 
-      <div className="flex  flex-col gap-10">
+      <div
+        style={{ fontFamily: "TTTravels", fontWeight: 600 }}
+        className="flex flex-col gap-10"
+      >
         <div className="flex items-center justify-between gap-10">
           <div>
             <SingleDataShow

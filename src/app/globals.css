@@ -2,7 +2,7 @@
 @plugin "daisyui";
 
 :root {
-  --background: #191D29;
+  --background: #191d29;
   --foreground: #171717;
 }
 
@@ -24,4 +24,55 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "TTTravels";
+  src: url("/Font/TTTravels-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTTravels";
+  src: url("/Font/TTTravels-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTTravels";
+  src: url("/Font/TTTravels-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: url("/Font/TTTravels-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: url("/Font/TTTravels-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: url("/Font/TTTravels-DemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: url("/Font/TTTravels-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: url("/Font/TTTravels-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
 }

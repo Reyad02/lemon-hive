@@ -14,7 +14,7 @@ export default async function Home() {
   const { results: characters } = await getAllCharacter();
   return (
     <div className="">
-      <div className="">
+      <div style={{ fontFamily: "TTTravels", fontWeight: 800 }} className="">
         <div className="flex mb-4 gap-4 max-w-5xl mx-auto relative items-baseline-last">
           <Image
             src={"/Image resource/bubble.png"}
@@ -23,7 +23,16 @@ export default async function Home() {
             height={20}
             className="absolute -top-2/3 -left-1/8 lg:-left-1/8 lg:-top-1/2 w-[80px] md:w-[190px] "
           />
-          <h1 className="text-4xl lg:text-9xl z-20 text-[#FFFFFF]">THE</h1>
+          <h1
+            style={{
+              fontFamily: "TTTravels",
+              fontStyle: "italic",
+              fontWeight: 700,
+            }}
+            className="text-3xl md:text-4xl lg:text-9xl z-20 text-[#FFFFFF]"
+          >
+            THE
+          </h1>
           <Image
             src={"/Image resource/portal.png"}
             alt="portal"
@@ -32,7 +41,7 @@ export default async function Home() {
             className="w-[60px]  md:w-[190px]"
           />
           <h1
-            className="text-4xl lg:text-9xl  text-transparent relative bg-clip-text"
+            className="text-3xl md:text-4xl lg:text-9xl  text-transparent relative bg-clip-text"
             style={{
               backgroundImage:
                 "linear-gradient(145.33deg, rgb(157, 254, 0), rgb(20, 217, 230))",
@@ -44,23 +53,37 @@ export default async function Home() {
         </div>
 
         <div className="flex gap-4  max-w-5xl mx-auto relative  items-end">
-          <h1 className="text-4xl lg:text-9xl text-[#FFFFFF]">
+          <h1 className="text-3xl md:text-4xl lg:text-9xl text-[#FFFFFF]">
             <span className="bg-gradient-to-r from-[#4EE984] to-[#1BDBDA] text-transparent bg-clip-text">
               MORTY
             </span>{" "}
-            WIKI
+            <span
+              style={{
+                fontFamily: "TTTravels",
+                fontStyle: "italic",
+                fontWeight: 700,
+              }}
+            >
+              WIKI
+            </span>
           </h1>
           <Image
             src={"/Image resource/Gun.png"}
             alt="portal"
             width={300}
             height={20}
-            className="absolute -right-1/10 md:-right-1/8 -top-[75%] w-[180px] md:w-[300px]"
+            className="absolute -right-1/10 md:-right-1/5 -top-[75%] w-[180px] md:w-[300px]"
           />
         </div>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row items-start md:justify-center md:items-center gap-8 md:gap-16 mt-6">
+      <div
+        style={{
+          fontFamily: "TTTravels",
+          fontWeight: 600,
+        }}
+        className="flex flex-col-reverse md:flex-row items-start md:justify-center md:items-center gap-8 md:gap-16 mt-6"
+      >
         <a
           target="_blank"
           href={"https://www.youtube.com/watch?v=KQ9Cgdsa9tc"}
@@ -68,7 +91,7 @@ export default async function Home() {
         >
           <FaRegPlayCircle /> Watch Now
         </a>
-        <p className="text-[10px] md:text-sm max-w-[200px] md:max-w-xs text-[#14D9E6]">
+        <p className="text-[10px] md:text-sm max-w-[200px]  md:max-w-[370px] text-[#14D9E6]">
           Brilliant but boozy scientist Rick hijacks his fretful teenage
           grandson, Morty, for wild escapades in other worlds and alternate
           dimensions.
@@ -76,10 +99,20 @@ export default async function Home() {
       </div>
 
       <div className="flex flex-row items-center justify-between px-4 py-6 md:py-8 text-white  mt-6 md:mt-24 mb-5 md:mb-8">
-        <p className="text-white text-lg md:text-2xl ">
+        <p
+          style={{
+            fontFamily: "TTTravels",
+            fontWeight: 500,
+          }}
+          className="text-white text-lg md:text-2xl "
+        >
           Meet the cast
         </p>
         <Link
+          style={{
+            fontFamily: "TTTravels",
+            fontWeight: 400,
+          }}
           href="/cast"
           className="text-white text-sm md:text-base outline-1 outline-[#9dfe00] rounded-lg py-1.5 px-4 md:px-6 md:py-2.5 transition"
         >
@@ -88,12 +121,24 @@ export default async function Home() {
       </div>
       <Characters characters={characters} />
 
-      <p className="text-white md:text-2xl mt-6 md:mt-24 mb-5 md:mb-8">
+      <p
+        style={{
+          fontFamily: "TTTravels",
+          fontWeight: 500,
+        }}
+        className="text-white md:text-2xl mt-6 md:mt-24 mb-5 md:mb-8"
+      >
         Episodes
       </p>
       <Episodes episodes={episodes} />
 
-      <p className="text-white md:text-2xl mt-6 md:mt-24 mb-5 md:mb-8">
+      <p
+        style={{
+          fontFamily: "TTTravels",
+          fontWeight: 500,
+        }}
+        className="text-white md:text-2xl mt-6 md:mt-24 mb-5 md:mb-8"
+      >
         Locations
       </p>
       <Locations locations={locations} />
