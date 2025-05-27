@@ -15,13 +15,13 @@ export default async function Home() {
   return (
     <div className="">
       <div style={{ fontFamily: "TTTravels", fontWeight: 800 }} className="">
-        <div className="flex mb-4 gap-4 max-w-5xl mx-auto relative items-baseline-last">
+        <div className="flex mb-4 gap-1 md:gap-4 max-w-5xl mx-auto relative items-baseline-last">
           <Image
             src={"/Image resource/bubble.png"}
             alt="portal"
             width={190}
             height={20}
-            className="absolute -top-2/3 -left-1/8 lg:-left-1/8 lg:-top-1/2 w-[80px] md:w-[190px] "
+            className="absolute -top-2/3 -left-1/8 lg:-left-1/10 lg:-top-1/2 w-[80px] md:w-[190px] "
           />
           <h1
             style={{
@@ -41,23 +41,18 @@ export default async function Home() {
             className="w-[60px]  md:w-[190px]"
           />
           <h1
-            className="text-3xl md:text-4xl lg:text-9xl  text-transparent relative bg-clip-text"
-            style={{
-              backgroundImage:
-                "linear-gradient(145.33deg, rgb(157, 254, 0), rgb(20, 217, 230))",
-            }}
+            className="text-3xl md:text-4xl lg:text-9xl text-transparent relative bg-clip-text bg-linear-to-r from-[#50E981] to-[#14D9E6]"
           >
             <div className="absolute rounded-4xl md:w-12 md:h-2 right-0 -top-2 bg-[linear-gradient(to_right,_#9DFE00_9%,_#14D9E6_94%)]"></div>
             RICK &
           </h1>
         </div>
 
-        <div className="flex gap-4  max-w-5xl mx-auto relative  items-end">
-          <h1 className="text-3xl md:text-4xl lg:text-9xl text-[#FFFFFF]">
-            <span className="bg-gradient-to-r from-[#4EE984] to-[#1BDBDA] text-transparent bg-clip-text">
+        <div className="flex gap-1 md:gap-4 max-w-5xl mx-auto relative items-end">
+            <span className="text-3xl md:text-4xl lg:text-9xl bg-linear-to-r from-[#9DFE00] to-[#51EA7F] text-transparent bg-clip-text">
               MORTY
             </span>{" "}
-            <span
+            <span className="text-3xl  md:text-4xl lg:text-9xl text-[#FFFFFF]"
               style={{
                 fontFamily: "TTTravels",
                 fontStyle: "italic",
@@ -66,7 +61,6 @@ export default async function Home() {
             >
               WIKI
             </span>
-          </h1>
           <Image
             src={"/Image resource/Gun.png"}
             alt="portal"
