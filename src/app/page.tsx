@@ -14,8 +14,12 @@ export default async function Home() {
   const { results: characters } = await getAllCharacter();
   return (
     <div className="">
-      <div style={{ fontFamily: "TTTravels", fontWeight: 800 }} className="">
-        <div className="flex mb-4 gap-1 md:gap-4 max-w-5xl mx-auto relative items-baseline-last">
+      <div
+        style={{ fontFamily: "TTTravels", fontWeight: 800 }}
+        className="relative"
+      >
+        <div className="blur-3xl md:blur-[160px] bg-[linear-gradient(145.33deg,_rgb(157,_254,_0)_-10.502%,_rgb(20,_217,_230)_80.859%)] w-full md:h-[38%] h-1/2 absolute opacity-90 md:top-1/2 top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className=" flex mb-4 gap-1 md:gap-4 max-w-5xl mx-auto relative items-baseline-last">
           <Image
             src={"/Image resource/bubble.png"}
             alt="portal"
@@ -40,27 +44,26 @@ export default async function Home() {
             height={20}
             className="w-[60px]  md:w-[190px]"
           />
-          <h1
-            className="text-3xl md:text-4xl lg:text-9xl text-transparent relative bg-clip-text bg-linear-to-r from-[#50E981] to-[#14D9E6]"
-          >
+          <h1 className="text-3xl md:text-4xl lg:text-9xl text-transparent relative bg-clip-text bg-linear-to-r from-[#50E981] to-[#14D9E6]">
             <div className="absolute rounded-4xl md:w-12 md:h-2 right-0 -top-2 bg-[linear-gradient(to_right,_#9DFE00_9%,_#14D9E6_94%)]"></div>
             RICK &
           </h1>
         </div>
 
         <div className="flex gap-1 md:gap-4 max-w-5xl mx-auto relative items-end">
-            <span className="text-3xl md:text-4xl lg:text-9xl bg-linear-to-r from-[#9DFE00] to-[#51EA7F] text-transparent bg-clip-text">
-              MORTY
-            </span>{" "}
-            <span className="text-3xl  md:text-4xl lg:text-9xl text-[#FFFFFF]"
-              style={{
-                fontFamily: "TTTravels",
-                fontStyle: "italic",
-                fontWeight: 700,
-              }}
-            >
-              WIKI
-            </span>
+          <span className="text-3xl md:text-4xl lg:text-9xl bg-linear-to-r from-[#9DFE00] to-[#51EA7F] text-transparent bg-clip-text">
+            MORTY
+          </span>{" "}
+          <span
+            className="text-3xl  md:text-4xl lg:text-9xl text-[#FFFFFF]"
+            style={{
+              fontFamily: "TTTravels",
+              fontStyle: "italic",
+              fontWeight: 700,
+            }}
+          >
+            WIKI
+          </span>
           <Image
             src={"/Image resource/Gun.png"}
             alt="portal"
